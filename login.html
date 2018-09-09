@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title id="title"></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="-1" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0"/>
+		<link rel="icon" href="img/favicon.png" />
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="background">
+		<div class="container">
+			<div class="row">
+				<div class="col-8 mr-a" id="main" style="float:none;">
+					<div class="row">
+						<div class="col-4">	
+
+							<!-- PRIMARY BANNER WINDOW -->
+							<div class="row">
+								<div class="col-12">
+									<div class="box bmh-80 bg-grey-dark box-shadow text-center"><img src="img/logo.png" alt="kemangi 41" style="border-radius: 5px; width:100%; max-width: 200px; height:auto;"/></div>
+								</div>
+							</div>
+
+							<!-- AUTHENTICATION WINDOW-->
+							<div class="row">
+								<div class="col-12">
+									<div class="card  box-shadow">
+
+										<div class="card-header bg-grey">
+											<h3 >Hotspot Gateway</h3>
+										</div>
+
+										<div class="card-body">
+											$(if chap-id)
+												<form name="sendin" action="$(link-login-only)" method="post">
+													<input type="hidden" name="username" />
+													<input type="hidden" name="password" />
+													<input type="hidden" name="dst" value="$(link-orig)" />
+													<input type="hidden" name="popup" value="true" />
+												</form>
+												<script type="text/javascript" src="js/md5.js"></script>
+												<script type="text/javascript">
+													function doLogin() 
+													{
+														document.sendin.username.value = document.login.username.value;
+														document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+														document.sendin.submit();
+														return false;
+													}
+												</script>
+											$(endif)
+										<div>	
+
+										<form autocomplete="off" name="login" action="$(link-login-only)" method="post"
+											$(if chap-id) onSubmit="return doLogin()" $(endif)>
+											<input type="hidden" name="dst" value="$(link-orig)" />
+											<input type="hidden" name="popup" value="true" />
+												<div class="row">
+													<div class="col-6 col-md-6"> 
+														<div class="box mr-2 pointer text-center text-light" id="btnvcr" onclick="voucher()">Voucher</div>
+													</div>
+													<div class="col-6 col-md-6">
+														<div class="box mr-2 pointer text-center text-light" id="btnmem" onclick="member()">Member</div>
+													</div>
+												</div>
+
+												<input class="form-control-md mr-t-10 plch-center" name="username" type="text" value="$(username)" placeholder="Voucher" />
+												<input class="form-control-md mr-t-10 plch-center" name="password" type="hidden" placeholder="Password" />
+
+												<div class="text-center mr-t-10">
+													<button type="submit" class="w-12 btn-md bg-success pd-5">Login</button>
+												</div>
+										</form>
+
+									</div>
+						
+					$(if error)<div class="alert bg-danger text-center mr-t-10">$(error)</div>$(endif)
+				</div>
+				<div class="card-footer bg-grey mr-t-10 text-center">
+					$(if trial == 'yes')Try free clicks <a class="text-pink text-bold" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">HERE</a>$(endif)
+				</div>
+			</div>
+		</div>
+
+								
+
+							</div>
+						</div>
+
+						<div class="col-8">
+							<div class="row">
+								<!-- SECOND COLUMN - 1ST WINDOW -->
+								<div class="col-12">
+									<div class="col-6">
+										<div class="card box-shadow">
+											<div class="card-header bg-grey"><h3>Getting Started!</h3></div>
+											<div class="card-body align-middle">
+												<strong>STEP 1:</strong> Pay and ask for username and password.<br> 
+												<strong>STEP 2:</strong> Connect to wifi, Wifi4Rent Hotspot.<br>
+												<strong>STEP 3:</strong> Type your username and password.<br>
+											</div>
+										</div>
+									</div>	
+									<div class="col-6">
+										<div class="card box-shadow">
+											<div class="card-header bg-grey"><h3>Information Board</h3></div>
+											<div class="card-body">
+												<p><strong>Speed:</strong> 3MBPS, di mo pa natype, nagsearch na.</p>
+												<p><strong>Where:</strong> Block 10, Lot 18 Narra Street, hali na!</p>
+												<p><strong>Landmark:</strong> 'Green' na bahay tabi ng tubigan.</p>
+											</div>
+										</div>	
+									</div>
+								</div>
+
+								<!-- SECOND COLUMN - 2ND WINDOW -->
+								<div class="col-12">
+									<div class="card box-shadow">
+										<div class="card-header bg-grey"><h3>Best-Selling Offers (Mga pwedeng mong rentahan)</h3></div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-6">
+													<div class="box bg-green bmh-60">
+														<div class="box-group">
+															<div class="box-group-icon">3Hrs</div>
+															<div class="box-group-area">
+															<span>
+																&#8369 15.00<br>
+																Parang hotel lang no?<br>
+															</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="box bg-yellow bmh-60">
+														<div class="box-group">
+															<div class="box-group-icon">7Hrs</div>
+															<div class="box-group-area">
+															<span>
+																&#8369 25.00<br>
+																Mas maswerte ka dito!<br>
+															</span>
+															</div>
+														</div>
+												</div>
+												</div>
+												<div class="col-6">
+													<div class="box bg-orange bmh-60">
+														<div class="box-group">
+															<div class="box-group-icon">1Day</div>
+															<div class="box-group-area">
+															<span>
+																&#8369 40.00<br>
+																Tulog2x din pag may time.<br>
+															</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="box bg-red bmh-60">
+														<div class="box-group">
+															<div class="box-group-icon">3Days</div>
+															<div class="box-group-area">
+															<span>
+																&#8369 75.00<br>
+																Kapag ikaw natokhang.<br>
+															</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer bg-grey pd-l-10">
+											<i>Copyright &copy; InterRent by <a class="text-light" href="https://www.bytes-crafter.com">Bytes Crafter</a></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		document.login.username.focus();
+		document.getElementById('title').innerHTML = window.location.hostname + " > login";
+		
+		// login page 2 mode by Laksamadi Guko
+		var username = document.login.username;
+		var password = document.login.password;
+		var luser = document.getElementById("luser");
+		var lpass = document.getElementById("lpass");
+		var btnmem = document.getElementById("btnmem");
+		var btnvcr = document.getElementById("btnvcr");
+		
+		// set password = username
+		function setpass()
+		{
+		  var user = username.value		
+		  password.value = user;
+		}
+		username.onchange = setpass;
+		btnmem.style.backgroundColor = "#494949";
+		btnvcr.style.backgroundColor = "#757575";  
+		
+		// change to voucher mode
+		function voucher()
+		{
+		  username.focus();
+		  username.onchange = setpass;
+		  username.placeholder = "Voucher";
+		  password.type = "hidden";
+		  password.value = username.value;  
+		  btnmem.style.backgroundColor = "#494949";
+		  btnvcr.style.backgroundColor = "#757575";  
+		}
+		
+		// change to member mode
+		function member()
+		{
+		  username.focus();
+		  username.onchange = "";
+		  username.placeholder = "Username";
+		  password.type= "password";
+		  password.value = "";
+		  btnmem.style.backgroundColor = "#757575"; 
+		  btnvcr.style.backgroundColor = "#494949"; 
+		}
+	</script>
+</html>
