@@ -42,15 +42,9 @@ EXAMPLE START
 Explain how to run the automated tests for this system
 EXAMPLE END
 
-### Break down into end to end tests
+### Creating or Editing Users / Voucherts
 
-EXAMPLE START
-Explain what these tests test and why
-
-```
-Give an example
-```
-EXAMPLE END
+IP > Hotspot > Users
 
 ### And coding style tests
 
