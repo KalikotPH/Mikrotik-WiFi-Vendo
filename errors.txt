@@ -17,42 +17,42 @@ internal-error = error internal ($(error-orig))
 # config-error
 # Should never happen if hotspot is configured properly.
 
-config-error = error konfigurasi ($(error-orig))
+config-error = error configuration ($(error-orig))
 
 # not-logged-in
 # Will happen, if status or logout page is requested by user,
 # which actually is not logged in
 
-not-logged-in = Anda tidak masuk (ip $(ip))
+not-logged-in = You're not logged in yet! (ip $(ip))
 
 # ippool-empty
 # IP address for user is to be assigned from ip pool, but there are no more
 # addresses in that pool
 
-ippool-empty = cannot assign ip address - no more free addresses from pool
+ippool-empty = WiFi is currently busy, kindly wait for some time.
 
 # shutting-down
 # When shutdown is executed, new clients are not accepted
 
-shutting-down = layanan hotspot tutup
+shutting-down = WiFi is currently shutting down.
 
 # user-session-limit
 # If user profile has limit of shared-users, then this error will be shown
 # after reaching this limit
 
-user-session-limit = kode voucher/user sedang aktif $(username)
+user-session-limit = $(username) is currently active or in use.
 
 # license-session-limit
 # Depending on licence number of active hotspot clients is limited to
 # one or another amount. If this limit is reached, following error is displayed.
 
-license-session-limit = durasi voucher Anda sudah habis ($(error-orig))
+license-session-limit = Your session is now expired. Want to try weekly or monthly subscription? Talk to us now! ($(error-orig))
 
 # wrong-mac-username
 # If username looks like MAC address (12:34:56:78:9a:bc), but is not
 # a MAC address of this client, login is rejected
 
-wrong-mac-username = kode voucher/user tidak sesuai ($(username)): MAC address ini bukan milik Anda
+wrong-mac-username = Your MAC addresss is not valid.
 
 # chap-missing
 # If http-chap login method is used, but hotspot program does not receive
@@ -65,38 +65,38 @@ wrong-mac-username = kode voucher/user tidak sesuai ($(username)): MAC address i
 # If JavaScript is enabled and login.html page is valid,
 # then retrying to login usually fixes this problem.
 
-chap-missing = web browser did not send challenge response (try again, enable JavaScript)
+chap-missing = Your web browser did not send challenge response. Try again, also try to enable JavaScript.
 
 # invalid-username
 # Most general case of invalid username or password. If RADIUS server
 # has sent an error string with Access-Reject message, then it will
 # override this setting.
 
-invalid-username = kode voucher/user tidak sesuai, masukkan kembali dengan benar.
+invalid-username = Your voucher or username and password combination is not incorrect.
 
 # invalid-mac
 # Local users (on hotspot server) can be bound to some MAC address. If login
 # from different MAC is tried, this error message will be shown.
 
-invalid-mac = kode voucher/user $(username) tidak dapat diaktifkan dari MAC address ini
+invalid-mac = Your device is different from the previous login. WiFi credential can't be shared through devices.
 
 # uptime-limit, traffic-limit
 # For local hotspot users in case if limits are reached
 
-uptime-limit = kode voucher/user $(username) sudah mencapai batas waktu
-traffic-limit = kode voucher/user $(username) sudah mencapai batas kuota
+uptime-limit = Your time limit is now reached. Want to try weekly or monthly subscription? Talk to us now!
+traffic-limit = Your data limit is now reached. Want to try weekly or monthly subscription? Talk to us now!
 
 # radius-timeout
 # User is authenticated by RADIUS server, but no response is received from it,
 # following error will be shown.
 
-radius-timeout = RADIUS server tidak merespon
+radius-timeout = WiFi did not respond as it should be. Report this issue.
 
 # auth-in-progress
 # Authorization in progress. Client already has issued an authorization request
 # which is not yet complete.
 
-auth-in-progress = sudah diaktifkan, coba lagi nanti
+auth-in-progress = Login in progress... Please try again later.
 
 # radius-reply
 # Radius server returned some custom error message

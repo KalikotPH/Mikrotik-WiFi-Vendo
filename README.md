@@ -42,17 +42,17 @@ EXAMPLE START
 Explain how to run the automated tests for this system
 EXAMPLE END
 
-### Creating or Editing Users / Voucherts
+### Creating or Editing Users
 
 IP > Hotspot > Users
 
-### And coding style tests
+- To create voucher, set same value for UN/PW.
 
-EXAMPLE START
-Explain what these tests test and why
+### Backup Credential
 
 ```
-Give an example
+Naming: interent-vX.X.X.backup
+Password: bytescrafter
 ```
 EXAMPLE END
 

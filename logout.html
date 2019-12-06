@@ -1,87 +1,84 @@
 <html>
-<head>
-<title id="title"></title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
-<link rel="stylesheet" href="css/mikhmon-ui-light.css">
-<link rel="stylesheet" href="css/background.css">
-<link rel="icon" href="img/favicon.png" />
-</head>
+	<head>
+		<title id="title">WiFi4Rent by Bytes Crafter</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="icon" href="assets/img/favicon.png" />
+	</head>
 
-<body class="background">
-<script language="JavaScript">
-<!--
-    function openLogin() {
-	if (window.name != 'hotspot_logout') return true;
-	open('$(link-login)', '_blank', '');
-	window.close();
-	return false;
-    }
-    function readablizeBytes(bytes) {
-		var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
-		var e = Math.floor(Math.log(bytes)/Math.log(1024));
-		return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
-	}
-//-->
-</script>
+	<body class="background">
 
-<div class="container">
-		<div class="row mt-10">
-			<div class="col-4 mr-a" style="float:none; margin-top: 10%;">
-				<div class="row">
-    				<div class="col-12">
-    					<div class="card box-shadow">
-    						<div class="card-header bg-grey-dark"><h3>Logout</h3></div>
-    						<div class="card-body">
-								<div class="box w-12 text-center"><h3>Paalam na muna, balik po kayo!</h3></div>
-  								<table class="table table-bordered table-hover mr-b-10" align="center">
-								    <tr>
-								      <td align="right">User</td>
-								      <td>$(username)</td>
-								    </tr>
-								    <tr>
-								      <td align="right">IP Address</td>
-								      <td>$(ip)</td>
-								    </tr>
-								    <tr>
-								      <td align="right">MAC Address</td>
-								      <td>$(mac)</td>
- 								   </tr>
- 								   <tr>
-								      <td align="right">Up | Down</td>
- 								      <td>$(bytes-in-nice) | $(bytes-out-nice)</td>
-								    </tr>
-    								<tr>
-      								  <td align="right">Timespan</td>
-								      <td>$(uptime)</td>
-								    </tr>
-								    $(if remain-bytes-total)
-								    <tr>
-								      <td align="right">Quota</td>
-								      <td><script language="JavaScript">document.write(readablizeBytes($(remain-bytes-total)));</script></td>
-								    </tr>
-								    $(endif)
-								    $(if session-time-left)
-								    <tr>
-									  <td align="right">Remaining</td>
-								      <td>$(session-time-left)</td>
-    								</tr>
-    								$(endif)
-  								</table>
-  								<div class="mr-b-10">
-    							<form action="$(link-login)" name="login" onSubmit="return openLogin()">
-      								<button type="submit" class="btn-md w-12 bg-red pd-5">Logout muna, tipid oras.</button>
-    							</form>
-    						</div>
+		<script language="JavaScript">
+			function openLogin() {
+			if (window.name != 'hotspot_logout') return true;
+			open('$(link-login)', '_blank', '');
+			window.close();
+			return false;
+			}
+			function readablizeBytes(bytes) {
+				var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+				var e = Math.floor(Math.log(bytes)/Math.log(1024));
+				return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
+			}
+		</script>
+
+		<div class="container">
+			<div class="row mt-10">
+				<div class="col-4 mr-a" style="float:none; margin-top: 10%;">
+					<div class="row">
+						<div class="col-12">
+							<div class="box bmh-80 bg-grey-dark box-shadow text-center"><img src="assets/img/banner.png" alt="kemangi 41" style="border-radius: 5px; width:100%; max-width: 200px; height:auto;"/></div>
+							<div class="card box-shadow">
+								<div class="card-header bg-grey-dark"><h3> Exit Gateway</h3></div>
+								<div class="card-body">
+									<div class="box w-12 text-center"><h3>Come back later!</h3></div>
+									<table class="table table-bordered table-hover mr-b-10" align="center">
+										<tr>
+										<td align="right">User</td>
+										<td>$(username)</td>
+										</tr>
+										<tr>
+										<td align="right">IP Address</td>
+										<td>$(ip)</td>
+										</tr>
+										<tr>
+										<td align="right">MAC Address</td>
+										<td>$(mac)</td>
+									</tr>
+									<tr>
+										<td align="right">Up | Down</td>
+										<td>$(bytes-in-nice) | $(bytes-out-nice)</td>
+										</tr>
+										<tr>
+										<td align="right">Timespan</td>
+										<td>$(uptime)</td>
+										</tr>
+										$(if remain-bytes-total)
+										<tr>
+										<td align="right">Quota</td>
+										<td><script language="JavaScript">document.write(readablizeBytes($(remain-bytes-total)));</script></td>
+										</tr>
+										$(endif)
+										$(if session-time-left)
+										<tr>
+										<td align="right">Remaining</td>
+										<td>$(session-time-left)</td>
+										</tr>
+										$(endif)
+									</table>
+									<div class="mr-b-10">
+									<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+										<button type="submit" class="btn-md w-12 bg-red pd-5">Signout</button>
+									</form>
+								</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-<script type="text/javascript">
-	document.getElementById('title').innerHTML = window.location.hostname + " > logout";
-</script>
-</body>
+
+	</body>
 </html>
